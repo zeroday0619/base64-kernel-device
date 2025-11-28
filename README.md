@@ -3,7 +3,7 @@
 ## Install
 ```bash
 sudo dkms add .
-sudo sudo dkms build base64dev/0.1 
+sudo dkms build base64dev/0.1 
 sudo dkms install base64dev/0.1
 sudo modprobe base64dev
 ```
