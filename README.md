@@ -5,7 +5,7 @@
 sudo dkms add .
 sudo dkms build base64dev/0.1 
 sudo dkms install base64dev/0.1
-sudo modprobe base64dev
+sudo modprobe base64dev xor_key=0x42
 ```
 
 ## Usage
@@ -15,4 +15,10 @@ cat /dev/base64enc
 
 echo -n "SGksIEkgYW0gTGludXggRGV2ZWxvcGVy" > /dev/base64dec
 cat /dev/base64dec
+
+echo -n "hello" > /dev/xorenc
+cat /dev/xorenc | hexdump -C
+
+cat /dev/xorenc > /dev/xordec
+cat /dev/xordec
 ```
